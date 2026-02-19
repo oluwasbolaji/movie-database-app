@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom"
+
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate()
+
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div
+      onClick={() => navigate(`/movie/${movie.imdbID}`)}
+      className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+    >
+
       <img
         src={movie.Poster}
         alt={movie.Title}
@@ -14,6 +22,7 @@ const MovieCard = ({ movie }) => {
         <h2 className="font-semibold">{movie.Title}</h2>
         <p className="text-gray-600">{movie.Year}</p>
       </div>
+
     </div>
   )
 }

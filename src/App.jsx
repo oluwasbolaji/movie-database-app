@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { Routes, Route } from "react-router-dom"
 import MovieList from "./components/MovieList"
+import MovieDetails from "./pages/MovieDetails"
 import { searchMovies } from "./services/omdbApi"
 
 function App() {
@@ -12,34 +14,46 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <Routes>
 
-      <h1 className="text-3xl font-bold mb-6">
-        Movie Database App
-      </h1>
+      <Route
+        path="/"
+        element={
+          <div className="min-h-screen bg-gray-100 p-6">
 
-      {/* Search Bar */}
-      <div className="flex gap-2 mb-6">
-        <input
-          type="text"
-          placeholder="Search movies..."
-          className="border p-2 rounded w-full"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+            <h1 className="text-3xl font-bold mb-6">
+              Movie Database App
+            </h1>
 
-        <button
-          onClick={handleSearch}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          Search
-        </button>
-      </div>
+            <div className="flex gap-2 mb-6">
+              <input
+                type="text"
+                placeholder="Search movies..."
+                className="border p-2 rounded w-full"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
 
-      {/* Movie List */}
-      <MovieList movies={movies} />
+              <button
+                onClick={handleSearch}
+                className="bg-blue-500 text-white px-4 py-2 rounded"
+              >
+                Search
+              </button>
+            </div>
 
-    </div>
+            <MovieList movies={movies} />
+
+          </div>
+        }
+      />
+
+      <Route
+        path="/movie/:id"
+        element={<MovieDetails />}
+      />
+
+    </Routes>
   )
 }
 
