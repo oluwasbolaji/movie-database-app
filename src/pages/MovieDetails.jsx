@@ -14,6 +14,7 @@ const MovieDetails = () => {
       const response = await fetch(
         `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
       )
+
       const data = await response.json()
       setMovie(data)
     }
@@ -35,7 +36,7 @@ const MovieDetails = () => {
         ← Back to Search
       </button>
 
-      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
+      <div className="bg-white p-6 rounded shadow flex flex-col md:flex-row gap-6">
 
         <img
           src={movie.Poster}
@@ -44,21 +45,29 @@ const MovieDetails = () => {
         />
 
         <div>
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-3xl font-bold">
             {movie.Title} ({movie.Year})
           </h1>
 
-          <p className="text-gray-600 mb-2">
+          <p className="text-gray-600 mt-2">
             {movie.Genre}
           </p>
 
-          <p className="mb-4">
+          <p className="mt-4">
             {movie.Plot}
           </p>
 
-          <p><strong>Actors:</strong> {movie.Actors}</p>
-          <p><strong>Rating:</strong> ⭐ {movie.imdbRating}</p>
-          <p><strong>Runtime:</strong> {movie.Runtime}</p>
+          <p className="mt-2">
+            <strong>Actors:</strong> {movie.Actors}
+          </p>
+
+          <p>
+            <strong>Rating:</strong> ⭐ {movie.imdbRating}
+          </p>
+
+          <p>
+            <strong>Runtime:</strong> {movie.Runtime}
+          </p>
 
         </div>
 
