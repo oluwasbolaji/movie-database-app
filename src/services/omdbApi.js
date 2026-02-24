@@ -16,7 +16,6 @@ export const searchMovies = async (query, page = 1) => {
       movies: data.Search || [],
       total: parseInt(data.totalResults) || 0,
     }
-
   } catch (err) {
     console.error("Error fetching movies:", err)
     return { movies: [], total: 0 }
@@ -34,7 +33,6 @@ export const getMovieDetails = async (id) => {
     if (data.Response === "False") return null
 
     return data
-
   } catch (err) {
     console.error("Error fetching movie details:", err)
     return null
