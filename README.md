@@ -1,16 +1,153 @@
-# React + Vite
+🎬 Movie Database App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Movie Search Application built with React that allows users to search movies, view detailed information, paginate results, and manage favorites with persistent local storage.
 
-Currently, two official plugins are available:
+This project demonstrates clean component architecture, API integration, state management, routing, and production-ready UI practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Live Demo
 
-## React Compiler
+https://movie-database-app-5b91.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📌 Overview
 
-## Expanding the ESLint configuration
+The Movie Database App integrates with the OMDb API to provide:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Real-time movie search
+
+Detailed movie information pages
+
+Paginated results
+
+Persistent favorites using localStorage
+
+Responsive and clean UI
+
+This project focuses on practical frontend engineering concepts such as:
+
+Component reusability
+
+API abstraction layer
+
+UI/UX improvements
+
+Client-side routing
+
+State persistence
+
+🚀 Features
+🔍 Movie Search
+
+Search movies by title
+
+Dynamic results from OMDb API
+
+Empty-state handling
+
+📄 Movie Details Page
+
+View full movie information
+
+Genre, Plot, Actors, Rating, Runtime, Release date
+
+Navigation back to search
+
+📚 Pagination
+
+Navigate between result pages
+
+Smart next/previous button rendering
+
+❤️ Favorites System
+
+Add / Remove favorites
+
+Stored in browser localStorage
+
+Persistent after page refresh
+
+⏳ Improved UX
+
+Loading spinner during API calls
+
+Error-safe API handling
+
+Poster fallback image
+
+Responsive grid layout
+
+🛠️ Tech Stack
+
+Frontend:
+
+React
+
+React Router DOM
+
+Tailwind CSS
+
+API:
+
+OMDb API
+
+State Management:
+
+React Hooks (useState, useEffect)
+
+Persistence:
+
+Browser localStorage
+
+Deployment:
+
+Vercel 
+
+
+📱 Responsive Design
+
+The layout adapts to:
+
+Mobile
+
+Tablet
+
+Desktop
+
+Built using Tailwind utility classes and responsive breakpoints.
+
+🧪 Possible Improvements
+
+Future enhancements could include:
+
+Debounced search input
+
+Dark mode toggle
+
+Search suggestions autocomplete
+
+Better error messaging UI
+
+Global favorites page
+
+Unit testing with Jest / React Testing Library
+
+Performance optimization with memoization
+
+📈 What This Project Demonstrates
+
+API integration best practices
+
+Clean component design
+
+React hooks mastery
+
+Routing implementation
+
+UI state handling
+
+Persistence handling with localStorage
+
+Production-ready UI thinking
+
+👤 Author
+Oluwasola Bolaji
+Frontend Developer
