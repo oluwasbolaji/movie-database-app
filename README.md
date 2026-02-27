@@ -149,5 +149,7 @@ Persistence handling with localStorage
 Production-ready UI thinking
 
 👤 Author
+
 Oluwasola Bolaji
+
 Frontend Developer
